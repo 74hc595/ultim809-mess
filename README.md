@@ -18,7 +18,7 @@ Un-emulated features:
 
 Building
 --------
-First, obtain the MESS source from the [official repository.]()
+First, obtain the MESS source from the [official repository.](http://mess.redump.net/compiling_mess)
 
 Then:
 *  copy `ultim809.c` to `src/mess/drivers/`
