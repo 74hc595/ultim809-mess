@@ -1,0 +1,35 @@
+Index: src/mess/messdriv.c
+===================================================================
+--- src/mess/messdriv.c	(revision 11160)
++++ src/mess/messdriv.c	(working copy)
+@@ -36,6 +36,8 @@
+ 
+ /****************CONSOLES****************************************************/
+ 
++  DRIVER( ultim809 )
++
+ 	/* 3DO */
+ 	DRIVER( 3do )	   /* 3DO consoles   */
+ 	DRIVER( 3do_pal )
+Index: src/mess/mess.mak
+===================================================================
+--- src/mess/mess.mak	(revision 11160)
++++ src/mess/mess.mak	(working copy)
+@@ -261,6 +261,7 @@
+ endif
+ 
+ DRVLIBS += \
++	$(MESSOBJ)/ultim809.a \
+ 	$(MESSOBJ)/3do.a \
+ 	$(MESSOBJ)/acorn.a \
+ 	$(MESSOBJ)/act.a \
+@@ -578,6 +579,9 @@
+ # manufacturer-specific groupings for drivers
+ #-------------------------------------------------
+ 
++$(MESSOBJ)/ultim809.a:	\
++	$(MESS_DRIVERS)/ultim809.o
++
+ $(MESSOBJ)/3do.a:				\
+ 	$(MESS_DRIVERS)/3do.o		\
+ 	$(MESS_MACHINE)/3do.o		\
